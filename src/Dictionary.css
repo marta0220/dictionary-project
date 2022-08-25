@@ -4,3 +4,14 @@
   --secondary-color: #ff9a3c;
   --accent-color: #ffc93c;
 }
+.Dictionary {
+  color: var(--default-text-color);
+}
+.Dictionary h1 {
+  color: var(--primary-color);
+}
+.Dictionary .word {
+  color: var(--secondary-color);
+  text-align: start;
+  font-size: 45px;
+}
