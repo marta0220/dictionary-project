@@ -1,5 +1,6 @@
 import React from "react";
+import "./Dictionary.css";
 
 export default function Dictionary() {
-  return <div>Dictionary content</div>;
+  return <div className="Dictionary">Dictionary content</div>;
 }
