@@ -1,8 +1,11 @@
 :root {
-  --default-text-color: #155263;
+  --default-text-color: #1b6579;
   --primary-color: #ff6f3c;
   --secondary-color: #ff9a3c;
   --accent-color: #ffc93c;
+}
+.logo {
+  max-width: 100px;
 }
 .Dictionary {
   color: var(--default-text-color);
@@ -12,6 +15,11 @@
 }
 .Dictionary .word {
   color: var(--secondary-color);
-  text-align: start;
-  font-size: 45px;
+
+  font-size: 50px;
+}
+.Meaning .partOfSpeech {
+  color: var(--accent-color);
+  font-size: 25px;
+  font-style: italic;
 }

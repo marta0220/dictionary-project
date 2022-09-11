@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
+import DictionaryInfo from "./DictionaryInfo";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState(null);
-  let [data, setData] = useState({});
+  let [data, setData] = useState(null);
   function handleResponse(response) {
     setData(response.data[0]);
   }
@@ -21,7 +22,7 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <h1>Dictionary</h1>
-      <h5>What word would you like to look up?</h5>
+      <h5 className="p-1">What word would you like to look up?</h5>
       <form onSubmit={search}>
         <input
           type="search"
@@ -30,8 +31,7 @@ export default function Dictionary() {
         />
         <input type="submit" value="Search" />
       </form>
-      <div className="word">{data.word}</div>
-      <div className="text-muted text-start">{data.phonetic}</div>
+      <DictionaryInfo data={data} />
     </div>
   );
 }
