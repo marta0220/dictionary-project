@@ -11,7 +11,14 @@ function App() {
       <main>
         <Dictionary />
       </main>
-      <footer>Coded by Marta Pauk</footer>
+      <footer className="m-3">
+        <a
+          href="https://github.com/marta0220/dictionary-project"
+          target="_blank"
+        >
+          Open-source code by Marta Pauk
+        </a>
+      </footer>
     </div>
   );
 }
