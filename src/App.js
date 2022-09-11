@@ -15,6 +15,7 @@ function App() {
         <a
           href="https://github.com/marta0220/dictionary-project"
           target="_blank"
+          rel="noreferrer"
         >
           Open-source code by Marta Pauk
         </a>
