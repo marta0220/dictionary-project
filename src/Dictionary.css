@@ -1,5 +1,5 @@
 :root {
-  --default-text-color: #1b6579;
+  --default-text-color: #026c89;
   --primary-color: #ff6f3c;
   --secondary-color: #ff9a3c;
   --accent-color: #ffc93c;
@@ -22,6 +22,14 @@
   color: var(--accent-color);
   font-size: 25px;
   font-style: italic;
+}
+.Synonyms {
+  color: var(--primary-color);
+  font-style: italic;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 footer a {
   text-decoration: none;
