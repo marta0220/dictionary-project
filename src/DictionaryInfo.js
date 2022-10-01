@@ -9,7 +9,7 @@ export default function DictionaryInfo(props) {
         <div className="word">{props.data.word}</div>
         {props.data.phonetics.map(function (phonetic, index) {
           return (
-            <div key={index}>
+            <div key={index} className="Phonetics">
               <Phonetics phonetics={phonetic} />
             </div>
           );

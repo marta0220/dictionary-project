@@ -18,18 +18,31 @@
 
   font-size: 50px;
 }
+.Phonetics .text {
+  opacity: 0.5;
+  color: rgb(32, 31, 30);
+  font-size: 25px;
+  padding-bottom: 5px;
+  padding-left: 4%;
+}
 .Meaning .partOfSpeech {
   color: var(--accent-color);
   font-size: 25px;
   font-style: italic;
 }
 .Synonyms {
-  color: var(--primary-color);
+  opacity: 0.7;
   font-style: italic;
 }
 ul {
   list-style: none;
   padding-left: 0;
+}
+.Images {
+  display: inherit;
+}
+img {
+  width: 300px;
 }
 footer a {
   text-decoration: none;
