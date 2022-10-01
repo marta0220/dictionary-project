@@ -5,7 +5,7 @@
   --accent-color: #ffc93c;
 }
 .logo {
-  max-width: 100px;
+  max-width: 80px;
 }
 .Dictionary {
   color: var(--default-text-color);
@@ -13,17 +13,45 @@
 .Dictionary h1 {
   color: var(--primary-color);
 }
+form .input {
+  padding: 8px 50px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+form .submit-button {
+  color: var(--accent-color);
+  transition: all 250ms ease-in-out;
+  border-radius: 5px;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  padding: 5px 50px;
+  margin: 8px auto;
+  display: block;
+}
+form .submit-button:hover {
+  color: white;
+  background: linear-gradient(var(--accent-color), var(--primary-color));
+}
+section {
+  background-color: #ff9a3c0d;
+  border-radius: 15px;
+  margin: 4% 0;
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
 .Dictionary .word {
   color: var(--secondary-color);
-
   font-size: 50px;
 }
 .Phonetics .text {
-  opacity: 0.5;
   color: rgb(32, 31, 30);
+  opacity: 0.5;
   font-size: 25px;
   padding-bottom: 5px;
   padding-left: 4%;
+}
+.Meaning {
+  padding-left: 10%;
 }
 .Meaning .partOfSpeech {
   color: var(--accent-color);
@@ -40,9 +68,13 @@ ul {
 }
 .Images {
   display: inherit;
+  margin: 5px;
 }
-img {
-  width: 300px;
+.Images img {
+  max-width: 300px;
+  max-height: 200px;
+  margin: 5px;
+  object-fit: scale-down;
 }
 footer a {
   text-decoration: none;

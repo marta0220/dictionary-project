@@ -1,12 +1,18 @@
 import React from "react";
-export default function Images(props) {
+export default function Images({ images }) {
   return (
     <div className="Images">
-      <img
-        src={props.images.urls.small}
-        alt={props.images.alt_description}
-        className=" img-fluid"
-      ></img>
+      {images.map(function (image, index) {
+        return (
+          <span key={index}>
+            <img
+              src={image.urls.small}
+              alt={image.alt_description}
+              className="img-fluid"
+            ></img>{" "}
+          </span>
+        );
+      })}
     </div>
   );
 }

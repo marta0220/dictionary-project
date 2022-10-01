@@ -14,16 +14,17 @@ export default function Dictionary({ defaultKeyword }) {
     setData(response.data[0]);
     setLoaded(true);
   }
-  function search() {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
-    let key = `JQRsBP1PU25FYQhL5dMUrquhHbKmRvKzTnQWwJSAKRU`;
-    let url = `https://api.unsplash.com/search/photos?page=1&per_page=3&query=${keyword}&client_id=${key}`;
-    axios.get(url).then(handleResponse);
-  }
-  function handleResponse(response) {
+  function handleUnsplashResponse(response) {
     setImages(response.data.results);
   }
+  function search() {
+    let DictionaryApiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(DictionaryApiUrl).then(handleDictionaryResponse);
+    let UnsplashApiKey = `JQRsBP1PU25FYQhL5dMUrquhHbKmRvKzTnQWwJSAKRU`;
+    let UnsplashApiUrl = `https://api.unsplash.com/search/photos?page=1&per_page=3&query=${keyword}&client_id=${UnsplashApiKey}`;
+    axios.get(UnsplashApiUrl).then(handleUnsplashResponse);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -42,22 +43,16 @@ export default function Dictionary({ defaultKeyword }) {
             type="search"
             placeholder={defaultKeyword}
             onInput={handleChangeOfKeyword}
+            className="input"
           />
-          <input type="submit" value="Search" />
+          <input type="submit" value="Search" className="submit-button" />
         </form>
-
         <DictionaryInfo data={data} />
-
-        {images.map(function (image, index) {
-          return (
-            <span key={index}>
-              <Images images={image} />{" "}
-            </span>
-          );
-        })}
+        <Images images={images} />
       </div>
     );
   } else {
     search();
+    return null;
   }
 }
