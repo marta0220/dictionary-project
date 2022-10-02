@@ -78,6 +78,8 @@ ul {
   max-height: 200px;
   margin: 5px;
   object-fit: scale-down;
+
+  border-radius: 2%;
 }
 footer a {
   text-decoration: none;
