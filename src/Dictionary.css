@@ -50,6 +50,9 @@ section {
   padding-bottom: 5px;
   padding-left: 4%;
 }
+audio {
+  max-width: 90%;
+}
 .Meaning {
   padding-left: 10%;
 }
@@ -79,4 +82,10 @@ ul {
 footer a {
   text-decoration: none;
   color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+  form .input {
+    padding: 8px 30px;
+  }
 }
